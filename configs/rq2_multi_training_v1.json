@@ -1,0 +1,143 @@
+{
+  "contract_name": "rq2_multi_training_v1",
+  "status": "FROZEN",
+  "role": "PRIMARY_CONFIRMATORY_TRAINING",
+  "protocol_version": "v1",
+  "research_question": "RQ2",
+  "purpose": "Train UniXcoder on multilingual vulnerability detection across all 7 approved languages and 5 seeds under CLEAN_EXACT_HASH, and evaluate on each target language clean test population.",
+  "governance": {
+    "governance_class": "PRIMARY_CONFIRMATORY",
+    "confirmatory_result": true,
+    "allowed_for_rq_performance_claims": true,
+    "target_test_outcomes_for_model_selection_forbidden": true,
+    "target_test_peeking_forbidden": true,
+    "target_test_evaluation_rule": "EVALUATE_ONLY_ONCE_WITH_FROZEN_BEST_VALIDATION_CHECKPOINT"
+  },
+  "recipe_source": "W3-I012",
+  "model": {
+    "name": "microsoft/unixcoder-base-nine",
+    "revision": "5f0dc256eb0904af496d427451da5d7f90261676",
+    "full_encoder_finetuning": true,
+    "classification_head": {
+      "pooling": "attention_mask_mean_over_non_padding_positions",
+      "hidden_size": 768,
+      "classifier": "linear",
+      "num_labels": 2,
+      "extra_mlp": false
+    }
+  },
+  "objective": {
+    "loss": "CrossEntropyLoss",
+    "class_weights": null
+  },
+  "optimizer": {
+    "family": "AdamW",
+    "learning_rate": 2e-05,
+    "weight_decay": 0.0,
+    "adam_epsilon": 1e-08
+  },
+  "input_contract": {
+    "tokenization_config": "configs/tokenization_v1.json",
+    "max_length": 768,
+    "truncation": "right",
+    "padding": "dynamic_batch_max_768"
+  },
+  "dataset_contract": {
+    "loader_config": "configs/dataset_loader_v1.json",
+    "track": "CLEAN_EXACT_HASH_MULTI",
+    "train_languages": [
+      "C",
+      "C#",
+      "C++",
+      "Go",
+      "Java",
+      "JavaScript",
+      "Python"
+    ],
+    "validation_languages": [
+      "C",
+      "C#",
+      "C++",
+      "Go",
+      "Java",
+      "JavaScript",
+      "Python"
+    ],
+    "target_test_languages": [
+      "C",
+      "C#",
+      "C++",
+      "Go",
+      "Java",
+      "JavaScript",
+      "Python"
+    ]
+  },
+  "experiment_matrix": {
+    "config_id": "RQ2_MULTI_ALL",
+    "confirmatory_seeds": [
+      17,
+      29,
+      43,
+      71,
+      101
+    ],
+    "total_configurations": 1,
+    "total_seeds": 5,
+    "total_training_runs": 5,
+    "total_test_evaluations": 35
+  },
+  "training_execution": {
+    "physical_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "effective_batch_size": 8,
+    "precision": "fp32",
+    "scheduler": "linear_decay",
+    "warmup_ratio": 0.1,
+    "gradient_clipping_max_norm": 1.0,
+    "max_epochs": 5,
+    "evaluation_frequency": "every_epoch",
+    "early_stopping": false
+  },
+  "checkpoint_selection": {
+    "criterion": "maximum_validation_checkpoint_score",
+    "checkpoint_metric": "equal_weight_language_macro_vulnerable_class_f1",
+    "checkpoint_rule": "mean(F1_C, F1_C#, F1_C++, F1_Go, F1_Java, F1_JavaScript, F1_Python)",
+    "language_weight": "1/7_equal_weight_per_language",
+    "pooled_or_sample_weighted": false,
+    "population": "all_seven_languages_clean_validation",
+    "tie_break": "earliest_epoch"
+  },
+  "test_evaluation": {
+    "population": "each_target_language_clean_test",
+    "baseline_comparison": "RQ1_MONO_L_SAME_SEED_SAME_TEST",
+    "effect_metric": "multilingual_effect = F1_Multi - F1_Mono",
+    "required_metrics": [
+      "vulnerable_class_f1",
+      "vulnerable_class_precision",
+      "vulnerable_class_recall",
+      "mcc",
+      "accuracy",
+      "tp",
+      "tn",
+      "fp",
+      "fn",
+      "auroc",
+      "average_precision"
+    ],
+    "uncertainty_estimation": {
+      "method": "stratified_bootstrap",
+      "replicates": 10000,
+      "confidence_level": 0.95
+    }
+  },
+  "artifact_paths": {
+    "base_output_dir": "results/rq2_multi",
+    "save_checkpoint_pt": false,
+    "save_test_predictions_jsonl": true,
+    "save_test_metrics_json": true,
+    "save_training_log_jsonl": true,
+    "save_run_metadata_json": true
+  }
+}
+

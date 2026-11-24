@@ -1,0 +1,8 @@
+language,n_units,n_clusters,median_cluster,max_cluster,top1_share,effective_clusters,giant_clusters_gt10pct,clusters_spanning_langs
+C,2933,715,2.0,76,0.026,213.4,0,13
+C#,418,54,2.5,60,0.144,16.1,2,1
+C++,1701,406,2.0,100,0.059,95.3,0,19
+Go,2801,257,4.0,618,0.221,17.3,1,2
+Java,3129,327,4.0,212,0.068,73.3,0,11
+JavaScript,4595,413,4.0,885,0.193,20.5,1,26
+Python,3117,397,4.0,308,0.099,50.9,0,24

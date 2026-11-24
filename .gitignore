@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+work/
+out/
+data/raw/*.csv
+*.zip
+data/cvefixes/units_v1.parquet

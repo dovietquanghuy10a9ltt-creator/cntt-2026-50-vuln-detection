@@ -1,0 +1,103 @@
+Số đơn vị có dự đoán: {'mono': 19907, 'multi': 19907, 'lolo': 19907} / 19907
+Số seed: {'lolo': 1, 'mono': 1, 'multi': 1}
+===== CHÍNH (tập chính, 10 epoch)
+      stat language  estimate  ci_low  ci_high                   verdict
+      mono   macro6     0.560   0.547    0.575      không phân biệt được
+      mono   macro7     0.553   0.541    0.567      không phân biệt được
+     multi   macro6     0.585   0.565    0.607           trên ngẫu nhiên
+     multi   macro7     0.574   0.551    0.597           trên ngẫu nhiên
+      lolo   macro6     0.578   0.556    0.600           trên ngẫu nhiên
+      lolo   macro7     0.573   0.550    0.595           trên ngẫu nhiên
+ lolo-mono   macro6     0.019  -0.002    0.036      không phân biệt được
+ lolo-mono   macro7     0.021  -0.001    0.040      không phân biệt được
+lolo-multi   macro6    -0.007  -0.022    0.006 tương đương (trong ±0.03)
+lolo-multi   macro7    -0.000  -0.014    0.012 tương đương (trong ±0.03)
+multi-mono   macro6     0.025   0.014    0.039            dương (CI > 0)
+multi-mono   macro7     0.021   0.005    0.036            dương (CI > 0)
+===== S1 (bỏ cụm khổng lồ)
+      stat language  estimate  ci_low  ci_high                   verdict
+      mono   macro6     0.559   0.546    0.574      không phân biệt được
+      mono   macro7     0.553   0.541    0.568      không phân biệt được
+     multi   macro6     0.578   0.563    0.596           trên ngẫu nhiên
+     multi   macro7     0.570   0.549    0.591      không phân biệt được
+      lolo   macro6     0.566   0.554    0.581           trên ngẫu nhiên
+      lolo   macro7     0.565   0.547    0.583      không phân biệt được
+ lolo-mono   macro6     0.007  -0.006    0.020 tương đương (trong ±0.03)
+ lolo-mono   macro7     0.012  -0.004    0.030 tương đương (trong ±0.03)
+lolo-multi   macro6    -0.012  -0.026    0.001 tương đương (trong ±0.03)
+lolo-multi   macro7    -0.005  -0.017    0.008 tương đương (trong ±0.03)
+multi-mono   macro6     0.019   0.012    0.026 tương đương (trong ±0.03)
+multi-mono   macro7     0.017   0.001    0.030            dương (CI > 0)
+===== S2 (tối đa 50 hàm mỗi cụm)
+      stat language  estimate  ci_low  ci_high                   verdict
+      mono   macro6     0.562   0.553    0.573           trên ngẫu nhiên
+      mono   macro7     0.558   0.548    0.569      không phân biệt được
+     multi   macro6     0.584   0.573    0.596           trên ngẫu nhiên
+     multi   macro7     0.578   0.564    0.591           trên ngẫu nhiên
+      lolo   macro6     0.576   0.565    0.587           trên ngẫu nhiên
+      lolo   macro7     0.575   0.561    0.589           trên ngẫu nhiên
+ lolo-mono   macro6     0.013   0.003    0.024 tương đương (trong ±0.03)
+ lolo-mono   macro7     0.017   0.003    0.030            dương (CI > 0)
+lolo-multi   macro6    -0.009  -0.018    0.000 tương đương (trong ±0.03)
+lolo-multi   macro7    -0.003  -0.012    0.006 tương đương (trong ±0.03)
+multi-mono   macro6     0.022   0.013    0.030            dương (CI > 0)
+multi-mono   macro7     0.020   0.007    0.031            dương (CI > 0)
+Theo ngôn ngữ:
+stat         lolo   mono  multi
+language                       
+C           0.540  0.537  0.537
+C#          0.544  0.509  0.506
+C++         0.629  0.520  0.596
+Go          0.538  0.497  0.534
+Java        0.548  0.592  0.607
+JavaScript  0.617  0.626  0.631
+Python      0.598  0.587  0.606
+macro6      0.578  0.560  0.585
+macro7      0.573  0.553  0.574
+===== S4: commit có ≤ 20 hàm nhãn 1 (13591 hàm)
+      stat  estimate  ci_low  ci_high  n_units  n_groups                   verdict
+      mono     0.569   0.560    0.580    13591      3257           trên ngẫu nhiên
+     multi     0.593   0.582    0.606    13591      3257           trên ngẫu nhiên
+      lolo     0.584   0.574    0.595    13591      3257           trên ngẫu nhiên
+ lolo−mono     0.015   0.005    0.024    13591      3257 tương đương (trong ±0,03)
+multi−mono     0.024   0.015    0.032    13591      3257            dương (CI > 0)
+lolo−multi    -0.009  -0.019    0.001    13591      3257 tương đương (trong ±0,03)
+===== S4: commit có ≤ 5 hàm nhãn 1 (7898 hàm)
+      stat  estimate  ci_low  ci_high  n_units  n_groups                   verdict
+      mono     0.574   0.564    0.584     7898      2767           trên ngẫu nhiên
+     multi     0.601   0.589    0.613     7898      2767           trên ngẫu nhiên
+      lolo     0.592   0.581    0.602     7898      2767           trên ngẫu nhiên
+ lolo−mono     0.018   0.007    0.030     7898      2767 tương đương (trong ±0,03)
+multi−mono     0.027   0.015    0.038     7898      2767            dương (CI > 0)
+lolo−multi    -0.009  -0.019    0.002     7898      2767 tương đương (trong ±0,03)
+===== Huấn luyện trên MVD, kiểm tra trên 12982 hàm chỉ có ở CVEfixes
+        stat  estimate  ci_low  ci_high  n_units  n_groups                   verdict
+      xmulti     0.575   0.562    0.593    12982      2063           trên ngẫu nhiên
+       multi     0.585   0.553    0.623    12982      2063           trên ngẫu nhiên
+xmulti−multi    -0.010  -0.037    0.020    12982      2063      không phân biệt được
+       xmono     0.563   0.550    0.580    12982      2063      không phân biệt được
+        mono     0.552   0.534    0.575    12982      2063      không phân biệt được
+  xmono−mono     0.011  -0.002    0.026    12982      2063 tương đương (trong ±0,03)
+            p_mono  p_multi  p_xmono  p_xmulti
+C            0.532    0.535    0.553     0.533
+C#           0.489    0.465    0.422     0.674
+C++          0.526    0.640    0.540     0.588
+Go           0.480    0.513    0.508     0.524
+Java         0.600    0.618    0.610     0.608
+JavaScript   0.616    0.616    0.611     0.622
+Python       0.559    0.590    0.559     0.577
+===== Mô tả: AUROC trên các phần của v2 (mô hình huấn luyện trên tập chính)
+                 tập  stat  estimate  ci_low  ci_high  n_units  n_groups              verdict
+          toàn bộ v2  mono     0.539   0.515    0.560    36748      6051 không phân biệt được
+          toàn bộ v2 multi     0.561   0.535    0.585    36748      6051 không phân biệt được
+           tập chính  mono     0.560   0.547    0.575    19907      3374 không phân biệt được
+           tập chính multi     0.585   0.565    0.607    19907      3374      trên ngẫu nhiên
+không ghép cặp, ≤768  mono     0.541   0.499    0.593     8664      2436 không phân biệt được
+không ghép cặp, ≤768 multi     0.554   0.517    0.608     8664      2436 không phân biệt được
+   dài hơn 768 token  mono     0.546   0.531    0.561     8177      2876 không phân biệt được
+   dài hơn 768 token multi     0.547   0.528    0.565     8177      2876 không phân biệt được
+===== Mô tả: AUROC trong cụm (trung bình theo cụm, macro 6): {'p_mono': 0.644, 'p_multi': 0.62, 'p_lolo': 0.632} | cụm hai hàm: {'p_mono': 0.661, 'p_multi': 0.604, 'p_lolo': 0.616} (1747 cụm)
+mono: AUROC test macro6 theo epoch [0.506, 0.528, 0.542, 0.551, 0.557, 0.56, 0.559, 0.561, 0.565, 0.565] | epoch được chọn {1: 3, 2: 3, 3: 4, 4: 4, 5: 6, 6: 3, 7: 1, 8: 7, 9: 2, 10: 2}
+multi: AUROC test macro6 theo epoch [0.515, 0.553, 0.571, 0.59, 0.59, 0.594, 0.583, 0.587, 0.578, 0.579] | epoch được chọn {3: 1, 5: 3, 10: 1}
+lolo: AUROC test macro6 theo epoch [0.535, 0.58, 0.583, 0.59, 0.584, 0.585, 0.574, 0.577, 0.575, 0.574] | epoch được chọn {1: 1, 2: 1, 3: 2, 4: 1, 7: 1, 10: 1}
+Tổng thời gian huấn luyện: 101.4 giờ GPU

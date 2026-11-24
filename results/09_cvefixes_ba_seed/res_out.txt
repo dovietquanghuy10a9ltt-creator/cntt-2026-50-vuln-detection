@@ -1,0 +1,98 @@
+===== ƯỚC LƯỢNG CHÍNH: trung bình qua seed [17, 29, 43]
+                                       tap         stat  estimate  ci_low  ci_high                   verdict  sd_giua_seed
+                            chính, macro 6         mono     0.563   0.552    0.577           trên ngẫu nhiên         0.006
+                            chính, macro 6        multi     0.583   0.564    0.604           trên ngẫu nhiên         0.004
+                            chính, macro 6         lolo     0.585   0.560    0.609           trên ngẫu nhiên         0.006
+                            chính, macro 6    lolo−mono     0.022   0.001    0.040            dương (CI > 0)         0.006
+                            chính, macro 6   multi−mono     0.020   0.009    0.033            dương (CI > 0)         0.010
+                            chính, macro 6   lolo−multi     0.002  -0.013    0.013 tương đương (trong ±0,03)         0.008
+                       chính, macro 7 (S3)         mono     0.553   0.543    0.566      không phân biệt được         0.003
+                       chính, macro 7 (S3)        multi     0.572   0.551    0.595           trên ngẫu nhiên         0.004
+                       chính, macro 7 (S3)         lolo     0.579   0.555    0.602           trên ngẫu nhiên         0.005
+                       chính, macro 7 (S3)    lolo−mono     0.026   0.004    0.044            dương (CI > 0)         0.007
+                       chính, macro 7 (S3)   multi−mono     0.019   0.002    0.034            dương (CI > 0)         0.007
+                       chính, macro 7 (S3)   lolo−multi     0.007  -0.006    0.018 tương đương (trong ±0,03)         0.006
+                        S1 bỏ cụm khổng lồ         mono     0.562   0.551    0.576           trên ngẫu nhiên         0.006
+                        S1 bỏ cụm khổng lồ        multi     0.576   0.563    0.592           trên ngẫu nhiên         0.003
+                        S1 bỏ cụm khổng lồ         lolo     0.571   0.559    0.586           trên ngẫu nhiên         0.004
+                        S1 bỏ cụm khổng lồ    lolo−mono     0.009  -0.002    0.020 tương đương (trong ±0,03)         0.007
+                        S1 bỏ cụm khổng lồ   multi−mono     0.013   0.008    0.020 tương đương (trong ±0,03)         0.009
+                        S1 bỏ cụm khổng lồ   lolo−multi    -0.005  -0.015    0.006 tương đương (trong ±0,03)         0.006
+                  S2 tối đa 50 hàm mỗi cụm         mono     0.565   0.557    0.574           trên ngẫu nhiên         0.004
+                  S2 tối đa 50 hàm mỗi cụm        multi     0.581   0.571    0.592           trên ngẫu nhiên         0.005
+                  S2 tối đa 50 hàm mỗi cụm         lolo     0.579   0.568    0.591           trên ngẫu nhiên         0.003
+                  S2 tối đa 50 hàm mỗi cụm    lolo−mono     0.014   0.004    0.024 tương đương (trong ±0,03)         0.004
+                  S2 tối đa 50 hàm mỗi cụm   multi−mono     0.016   0.009    0.022 tương đương (trong ±0,03)         0.008
+                  S2 tối đa 50 hàm mỗi cụm   lolo−multi    -0.002  -0.010    0.005 tương đương (trong ±0,03)         0.006
+                 S4 commit ≤ 20 hàm nhãn 1         mono     0.573   0.565    0.582           trên ngẫu nhiên         0.005
+                 S4 commit ≤ 20 hàm nhãn 1        multi     0.590   0.580    0.601           trên ngẫu nhiên         0.004
+                 S4 commit ≤ 20 hàm nhãn 1         lolo     0.587   0.576    0.598           trên ngẫu nhiên         0.003
+                 S4 commit ≤ 20 hàm nhãn 1    lolo−mono     0.014   0.005    0.022 tương đương (trong ±0,03)         0.005
+                 S4 commit ≤ 20 hàm nhãn 1   multi−mono     0.017   0.010    0.024 tương đương (trong ±0,03)         0.009
+                 S4 commit ≤ 20 hàm nhãn 1   lolo−multi    -0.003  -0.011    0.004 tương đương (trong ±0,03)         0.006
+                  S4 commit ≤ 5 hàm nhãn 1         mono     0.575   0.567    0.583           trên ngẫu nhiên         0.004
+                  S4 commit ≤ 5 hàm nhãn 1        multi     0.600   0.590    0.610           trên ngẫu nhiên         0.001
+                  S4 commit ≤ 5 hàm nhãn 1         lolo     0.598   0.587    0.608           trên ngẫu nhiên         0.005
+                  S4 commit ≤ 5 hàm nhãn 1    lolo−mono     0.023   0.014    0.032            dương (CI > 0)         0.006
+                  S4 commit ≤ 5 hàm nhãn 1   multi−mono     0.025   0.017    0.033            dương (CI > 0)         0.004
+                  S4 commit ≤ 5 hàm nhãn 1   lolo−multi    -0.002  -0.010    0.006 tương đương (trong ±0,03)         0.006
+huấn luyện trên MVD, hàm chỉ có ở CVEfixes       xmulti     0.570   0.560    0.586           trên ngẫu nhiên         0.004
+huấn luyện trên MVD, hàm chỉ có ở CVEfixes        multi     0.585   0.554    0.620           trên ngẫu nhiên         0.003
+huấn luyện trên MVD, hàm chỉ có ở CVEfixes        xmono     0.560   0.549    0.575      không phân biệt được         0.006
+huấn luyện trên MVD, hàm chỉ có ở CVEfixes         mono     0.557   0.541    0.576      không phân biệt được         0.009
+huấn luyện trên MVD, hàm chỉ có ở CVEfixes xmulti−multi    -0.014  -0.042    0.016      không phân biệt được         0.006
+huấn luyện trên MVD, hàm chỉ có ở CVEfixes   xmono−mono     0.004  -0.009    0.018 tương đương (trong ±0,03)         0.007
+===== Từng seed
+seed                                                              s17           s29           s43
+tap                                        stat                                                  
+S1 bỏ cụm khổng lồ                         lolo            0.566 trên    0.572 trên    0.575 trên
+                                           lolo−mono      0.007 tương   0.002 tương   0.017 tương
+                                           lolo−multi    -0.012 tương    -0.0 tương  -0.001 tương
+                                           mono           0.559 không    0.569 trên   0.558 không
+                                           multi           0.578 trên    0.572 trên    0.577 trên
+                                           multi−mono     0.019 tương   0.003 tương   0.019 dương
+S2 tối đa 50 hàm mỗi cụm                   lolo            0.576 trên    0.579 trên    0.582 trên
+                                           lolo−mono      0.013 tương    0.01 tương   0.018 tương
+                                           lolo−multi    -0.009 tương   0.003 tương  -0.001 tương
+                                           mono            0.562 trên    0.569 trên    0.564 trên
+                                           multi           0.584 trên    0.576 trên    0.583 trên
+                                           multi−mono     0.022 dương   0.007 tương   0.019 tương
+S4 commit ≤ 20 hàm nhãn 1                  lolo            0.584 trên    0.587 trên     0.59 trên
+                                           lolo−mono      0.015 tương   0.008 tương   0.019 tương
+                                           lolo−multi    -0.009 tương   0.002 tương  -0.002 tương
+                                           mono            0.569 trên    0.579 trên    0.571 trên
+                                           multi           0.593 trên    0.585 trên    0.592 trên
+                                           multi−mono     0.024 dương   0.006 tương   0.021 dương
+S4 commit ≤ 5 hàm nhãn 1                   lolo            0.592 trên      0.6 trên    0.601 trên
+                                           lolo−mono      0.018 tương   0.021 dương    0.03 dương
+                                           lolo−multi    -0.009 tương   0.001 tương   0.002 tương
+                                           mono            0.574 trên    0.579 trên    0.571 trên
+                                           multi           0.601 trên      0.6 trên    0.599 trên
+                                           multi−mono     0.027 dương    0.02 dương   0.027 dương
+chính, macro 6                             lolo            0.578 trên    0.589 trên    0.589 trên
+                                           lolo−mono      0.019 không   0.019 không   0.029 dương
+                                           lolo−multi    -0.007 tương    0.01 tương   0.003 tương
+                                           mono            0.56 không     0.57 trên     0.56 trên
+                                           multi           0.585 trên    0.579 trên    0.586 trên
+                                           multi−mono     0.025 dương   0.009 tương   0.026 dương
+chính, macro 7 (S3)                        lolo            0.573 trên   0.579 không    0.584 trên
+                                           lolo−mono      0.021 không   0.023 không   0.033 dương
+                                           lolo−multi      -0.0 tương   0.012 tương   0.009 tương
+                                           mono           0.553 không   0.556 không    0.55 không
+                                           multi           0.574 trên   0.568 không    0.575 trên
+                                           multi−mono     0.021 dương   0.011 không   0.024 dương
+huấn luyện trên MVD, hàm chỉ có ở CVEfixes mono           0.552 không   0.566 không   0.551 không
+                                           multi           0.585 trên    0.581 trên    0.588 trên
+                                           xmono          0.563 không    0.564 trên   0.553 không
+                                           xmono−mono     0.011 tương  -0.002 tương   0.002 tương
+                                           xmulti          0.575 trên     0.57 trên    0.566 trên
+                                           xmulti−multi   -0.01 không  -0.011 không  -0.021 không
+===== Theo ngôn ngữ (trung bình qua seed, mô tả)
+             mono  multi   lolo
+C           0.543  0.534  0.553
+C#          0.492  0.504  0.540
+C++         0.521  0.596  0.643
+Go          0.497  0.535  0.536
+Java        0.601  0.608  0.563
+JavaScript  0.627  0.626  0.621
+Python      0.591  0.600  0.596

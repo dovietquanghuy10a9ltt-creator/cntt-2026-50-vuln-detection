@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Nếu dùng mã hoặc dữ liệu của repo này, vui lòng trích dẫn như sau."
+title: "Nghiên cứu ứng dụng mô hình ngôn ngữ trong phát hiện lỗ hổng bảo mật trên mã nguồn đa ngôn ngữ (CNTT-2026-50)"
+type: software
+authors:
+  - family-names: "Đỗ"
+    given-names: "Viết Quang Huy"
+  - family-names: "Mai"
+    given-names: "Trung Đức"
+  - family-names: "Nguyễn"
+    given-names: "Văn Cường"
+  - family-names: "Hoàng"
+    given-names: "Thanh Hằng"
+  - family-names: "Đỗ"
+    given-names: "Tùng Dương"
+date-released: 2026-11-24
+license: MIT
+repository-code: "https://github.com/dovietquanghuy10a9ltt-creator/cntt-2026-50-vuln-detection"
+keywords: [vulnerability detection, multilingual, data leakage, UniXcoder, CodeBERT, preregistration]

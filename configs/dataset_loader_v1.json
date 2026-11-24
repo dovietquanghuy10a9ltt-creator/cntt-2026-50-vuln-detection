@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN",
+  "decision_ids": [
+    "W3-I007",
+    "W3-I008"
+  ],
+  "protocol_version": "v1",
+  "canonical_input_field": "func",
+  "raw_main_files": {
+    "train": "data/raw/train_w_line.csv",
+    "validation": "data/raw/val_w_line.csv",
+    "test": "data/raw/test_w_line.csv"
+  },
+  "clean_model_unit": {
+    "identity": {
+      "field": "func",
+      "newline_normalization": "CRLF_and_CR_to_LF",
+      "outer_whitespace": "strip",
+      "hash": "sha256_utf8"
+    },
+    "exclude_whole_hash_group_if": [
+      "conflicting_target",
+      "cross_language_exact_identity"
+    ],
+    "effective_split_precedence": [
+      "train",
+      "validation",
+      "test"
+    ],
+    "effective_split_selection": "highest_precedence",
+    "max_model_units_per_hash": 1,
+    "representative_row": {
+      "scope": "effective_split_occurrences",
+      "tie_breaker": "smallest_string_valued_id",
+      "purpose": [
+        "representative_id",
+        "func"
+      ],
+      "audited_raw_func_variant_count": 0
+    },
+    "metadata": {
+      "language": "must_be_unique_per_retained_hash",
+      "target": "must_be_unique_per_retained_hash",
+      "effective_specific_cwes": "sorted_union_within_effective_split_specific_CWE_values",
+      "all_cves": "sorted_union_over_all_original_occurrences",
+      "all_projects": "sorted_union_over_all_original_occurrences"
+    },
+    "required_fields": [
+      "unit_id",
+      "representative_id",
+      "func_hash",
+      "func",
+      "split",
+      "language",
+      "target",
+      "effective_specific_cwes",
+      "all_cves",
+      "all_projects",
+      "effective_occurrence_count"
+    ],
+    "references": {
+      "raw_rows": 20165,
+      "unique_ids": 20165,
+      "clean_units": 18694,
+      "multi_effective_occurrence_hashes": 509,
+      "multi_raw_func_variant_hashes": 0,
+      "multi_normalized_func_variant_hashes": 0
+    }
+  },
+  "tracks": {
+    "PREDEFINED_BENCHMARK": {
+      "source": "original_rows_original_split",
+      "governance_class": "SECONDARY_BENCHMARK_COMPARABLE"
+    },
+    "CLEAN_EXACT_HASH": {
+      "source": "clean_model_units",
+      "governance_class": "PRIMARY_CONFIRMATORY_for_RQ1_RQ2",
+      "population_reference": {
+        "train": 14791,
+        "validation": 1937,
+        "test": 1966,
+        "total": 18694
+      },
+      "mono": {
+        "train": "clean_train_language_L",
+        "validation": "clean_validation_language_L",
+        "test": "clean_test_language_L"
+      },
+      "multi": {
+        "train": "all_clean_train",
+        "validation": "all_clean_validation",
+        "test": "same_clean_Test_L_as_Mono_L"
+      }
+    },
+    "CLEAN_STRICT_LOLO": {
+      "source": "clean_model_units",
+      "governance_class": "PRIMARY_CONFIRMATORY_for_RQ3",
+      "target_test": "clean_test_language_L",
+      "source_base": "clean_train_and_validation_excluding_language_L",
+      "destructive_filters": [
+        "target_test_func_hash_overlap",
+        "target_test_CVE_provenance_overlap"
+      ],
+      "project_policy": "verify_zero_overlap_fail_closed_no_new_filter",
+      "required_invariants": {
+        "target_language_units_in_source": 0,
+        "target_test_exact_overlap": 0,
+        "target_test_cve_overlap": 0,
+        "target_test_project_overlap": 0
+      },
+      "source_population_reference": {
+        "C": {
+          "train": 12427,
+          "validation": 1637
+        },
+        "C#": {
+          "train": 14291,
+          "validation": 1868
+        },
+        "C++": {
+          "train": 13425,
+          "validation": 1761
+        },
+        "Go": {
+          "train": 12561,
+          "validation": 1650
+        },
+        "Java": {
+          "train": 12129,
+          "validation": 1598
+        },
+        "JavaScript": {
+          "train": 11086,
+          "validation": 1405
+        },
+        "Python": {
+          "train": 12186,
+          "validation": 1607
+        }
+      }
+    }
+  },
+  "target_test_governance": {
+    "metadata_use": "pre_specified_population_construction_and_invariant_verification_only",
+    "forbidden_for": [
+      "hyperparameter_selection",
+      "checkpoint_selection",
+      "early_stopping",
+      "model_selection",
+      "threshold_tuning",
+      "seed_selection"
+    ]
+  },
+  "near_duplicate_status": "NOT_ASSESSED",
+  "fail_closed_on_invariant_violation": true
+}

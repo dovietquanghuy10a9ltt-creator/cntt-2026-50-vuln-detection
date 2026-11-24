@@ -1,0 +1,9 @@
+# Phân tích và dựng dữ liệu (CPU)
+numpy
+pandas
+scipy
+scikit-learn
+pyarrow
+# Huấn luyện (GPU); phiên bản ghi trong nhật ký các lần chạy
+torch==2.11.0
+transformers==5.20.2

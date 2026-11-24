@@ -1,0 +1,330 @@
+
+===================== MVD (14945 hàm) =====================
+Mã băm chuẩn dự đoán UniXcoder (mode,unit_id,xác suất 8 chữ số; sắp xếp): c8f776c0549687e47039209879aa3d633fc25c2be872d2dd5bb93829539a0316
+--- chính, macro 6: 14945 hàm, 2466 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.558   0.547    0.570      không phân biệt được
+              CodeBERT Multi     0.575   0.564    0.592           trên ngẫu nhiên
+               CodeBERT LOLO     0.577   0.562    0.595           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.019   0.001    0.037            dương (CI > 0)
+       CodeBERT Multi − Mono     0.018   0.006    0.034            dương (CI > 0)
+       CodeBERT LOLO − Multi     0.001  -0.014    0.016 tương đương (trong ±0,03)
+              UniXcoder Mono     0.578   0.566    0.591           trên ngẫu nhiên
+             UniXcoder Multi     0.590   0.576    0.606           trên ngẫu nhiên
+              UniXcoder LOLO     0.588   0.572    0.606           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.010  -0.002    0.025 tương đương (trong ±0,03)
+      UniXcoder Multi − Mono     0.012   0.002    0.022 tương đương (trong ±0,03)
+      UniXcoder LOLO − Multi    -0.002  -0.011    0.009 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.020  -0.031   -0.010               âm (CI < 0)
+             Hiệu kép (Mono)     0.005  -0.013    0.024 tương đương (trong ±0,03)
+CodeBERT − UniXcoder (Multi)    -0.014  -0.027    0.003 tương đương (trong ±0,03)
+            Hiệu kép (Multi)     0.007  -0.023    0.032      không phân biệt được
+ CodeBERT − UniXcoder (LOLO)    -0.011  -0.025    0.003 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)     0.005  -0.022    0.030 tương đương (trong ±0,03)
+--- S3 macro 7: 14945 hàm, 2466 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.554   0.544    0.565      không phân biệt được
+              CodeBERT Multi     0.579   0.566    0.597           trên ngẫu nhiên
+               CodeBERT LOLO     0.585   0.573    0.600           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.031   0.014    0.048            dương (CI > 0)
+       CodeBERT Multi − Mono     0.025   0.011    0.042            dương (CI > 0)
+       CodeBERT LOLO − Multi     0.006  -0.010    0.021 tương đương (trong ±0,03)
+              UniXcoder Mono     0.577   0.566    0.591           trên ngẫu nhiên
+             UniXcoder Multi     0.593   0.579    0.609           trên ngẫu nhiên
+              UniXcoder LOLO     0.599   0.584    0.616           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.022   0.009    0.034            dương (CI > 0)
+      UniXcoder Multi − Mono     0.015   0.001    0.028 tương đương (trong ±0,03)
+      UniXcoder LOLO − Multi     0.007  -0.006    0.019 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.024  -0.036   -0.012               âm (CI < 0)
+             Hiệu kép (Mono)     0.005  -0.013    0.024 tương đương (trong ±0,03)
+CodeBERT − UniXcoder (Multi)    -0.014  -0.027    0.003 tương đương (trong ±0,03)
+            Hiệu kép (Multi)     0.007  -0.023    0.032      không phân biệt được
+ CodeBERT − UniXcoder (LOLO)    -0.015  -0.028   -0.000 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)     0.005  -0.022    0.030 tương đương (trong ±0,03)
+--- S1 bỏ cụm khổng lồ: 14221 hàm, 2463 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.559   0.547    0.572      không phân biệt được
+              CodeBERT Multi     0.573   0.561    0.587           trên ngẫu nhiên
+               CodeBERT LOLO     0.575   0.561    0.590           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.017  -0.001    0.032      không phân biệt được
+       CodeBERT Multi − Mono     0.015   0.004    0.026 tương đương (trong ±0,03)
+       CodeBERT LOLO − Multi     0.002  -0.015    0.017 tương đương (trong ±0,03)
+              UniXcoder Mono     0.580   0.568    0.594           trên ngẫu nhiên
+             UniXcoder Multi     0.593   0.578    0.608           trên ngẫu nhiên
+              UniXcoder LOLO     0.593   0.576    0.608           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.013  -0.001    0.027 tương đương (trong ±0,03)
+      UniXcoder Multi − Mono     0.013   0.002    0.024 tương đương (trong ±0,03)
+      UniXcoder LOLO − Multi    -0.000  -0.010    0.010 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.021  -0.031   -0.011               âm (CI < 0)
+             Hiệu kép (Mono)     0.007  -0.011    0.026 tương đương (trong ±0,03)
+CodeBERT − UniXcoder (Multi)    -0.020  -0.029   -0.009 tương đương (trong ±0,03)
+            Hiệu kép (Multi)     0.015  -0.006    0.036      không phân biệt được
+ CodeBERT − UniXcoder (LOLO)    -0.017  -0.029   -0.008 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)     0.014  -0.004    0.034      không phân biệt được
+--- S2 tối đa 50 hàm mỗi cụm: 13259 hàm, 2466 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.558   0.547    0.569      không phân biệt được
+              CodeBERT Multi     0.573   0.563    0.584           trên ngẫu nhiên
+               CodeBERT LOLO     0.572   0.560    0.584           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.015   0.001    0.027 tương đương (trong ±0,03)
+       CodeBERT Multi − Mono     0.016   0.005    0.028 tương đương (trong ±0,03)
+       CodeBERT LOLO − Multi    -0.001  -0.013    0.009 tương đương (trong ±0,03)
+              UniXcoder Mono     0.582   0.570    0.593           trên ngẫu nhiên
+             UniXcoder Multi     0.593   0.580    0.606           trên ngẫu nhiên
+              UniXcoder LOLO     0.590   0.578    0.602           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.009  -0.002    0.019 tương đương (trong ±0,03)
+      UniXcoder Multi − Mono     0.011   0.002    0.021 tương đương (trong ±0,03)
+      UniXcoder LOLO − Multi    -0.003  -0.012    0.007 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.024  -0.035   -0.013               âm (CI < 0)
+             Hiệu kép (Mono)     0.010  -0.010    0.031      không phân biệt được
+CodeBERT − UniXcoder (Multi)    -0.019  -0.028   -0.009 tương đương (trong ±0,03)
+            Hiệu kép (Multi)     0.015  -0.004    0.033      không phân biệt được
+ CodeBERT − UniXcoder (LOLO)    -0.018  -0.027   -0.009 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)     0.014  -0.003    0.033      không phân biệt được
+--- S4 commit ≤ 20 hàm nhãn 1: 11159 hàm, 2417 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.557   0.548    0.566      không phân biệt được
+              CodeBERT Multi     0.574   0.564    0.584           trên ngẫu nhiên
+               CodeBERT LOLO     0.575   0.566    0.584           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.018   0.006    0.029 tương đương (trong ±0,03)
+       CodeBERT Multi − Mono     0.017   0.006    0.027 tương đương (trong ±0,03)
+       CodeBERT LOLO − Multi     0.001  -0.009    0.011 tương đương (trong ±0,03)
+              UniXcoder Mono     0.583   0.574    0.593           trên ngẫu nhiên
+             UniXcoder Multi     0.596   0.586    0.607           trên ngẫu nhiên
+              UniXcoder LOLO     0.590   0.580    0.600           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.006  -0.003    0.016 tương đương (trong ±0,03)
+      UniXcoder Multi − Mono     0.013   0.004    0.022 tương đương (trong ±0,03)
+      UniXcoder LOLO − Multi    -0.007  -0.016    0.002 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.026  -0.035   -0.016               âm (CI < 0)
+             Hiệu kép (Mono)     0.012  -0.008    0.032      không phân biệt được
+CodeBERT − UniXcoder (Multi)    -0.022  -0.031   -0.013               âm (CI < 0)
+            Hiệu kép (Multi)     0.011  -0.006    0.030 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (LOLO)    -0.015  -0.023   -0.006 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)     0.011  -0.007    0.028 tương đương (trong ±0,03)
+--- S4 commit ≤ 5 hàm nhãn 1: 6897 hàm, 2146 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.561   0.551    0.571           trên ngẫu nhiên
+              CodeBERT Multi     0.576   0.566    0.587           trên ngẫu nhiên
+               CodeBERT LOLO     0.581   0.570    0.591           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.021   0.010    0.032            dương (CI > 0)
+       CodeBERT Multi − Mono     0.015   0.004    0.026 tương đương (trong ±0,03)
+       CodeBERT LOLO − Multi     0.005  -0.005    0.016 tương đương (trong ±0,03)
+              UniXcoder Mono     0.590   0.579    0.600           trên ngẫu nhiên
+             UniXcoder Multi     0.606   0.594    0.618           trên ngẫu nhiên
+              UniXcoder LOLO     0.591   0.580    0.603           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.002  -0.010    0.013 tương đương (trong ±0,03)
+      UniXcoder Multi − Mono     0.017   0.006    0.027 tương đương (trong ±0,03)
+      UniXcoder LOLO − Multi    -0.015  -0.025   -0.004 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.029  -0.039   -0.020               âm (CI < 0)
+             Hiệu kép (Mono)     0.018  -0.000    0.037      không phân biệt được
+CodeBERT − UniXcoder (Multi)    -0.030  -0.041   -0.019               âm (CI < 0)
+            Hiệu kép (Multi)     0.016  -0.006    0.036      không phân biệt được
+ CodeBERT − UniXcoder (LOLO)    -0.010  -0.020   -0.000 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)     0.008  -0.012    0.027 tương đương (trong ±0,03)
+--- S5 hàm ≤ 510 token (CodeBERT thấy trọn hàm): 11315 hàm, 1963 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.561   0.548    0.575      không phân biệt được
+              CodeBERT Multi     0.580   0.566    0.597           trên ngẫu nhiên
+               CodeBERT LOLO     0.584   0.569    0.605           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.023   0.005    0.046            dương (CI > 0)
+       CodeBERT Multi − Mono     0.019   0.005    0.037            dương (CI > 0)
+       CodeBERT LOLO − Multi     0.004  -0.014    0.022 tương đương (trong ±0,03)
+              UniXcoder Mono     0.579   0.566    0.597           trên ngẫu nhiên
+             UniXcoder Multi     0.591   0.576    0.609           trên ngẫu nhiên
+              UniXcoder LOLO     0.590   0.576    0.611           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.011  -0.003    0.028 tương đương (trong ±0,03)
+      UniXcoder Multi − Mono     0.012  -0.000    0.022 tương đương (trong ±0,03)
+      UniXcoder LOLO − Multi    -0.001  -0.012    0.013 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.019  -0.032   -0.007               âm (CI < 0)
+             Hiệu kép (Mono)     0.003  -0.019    0.027 tương đương (trong ±0,03)
+CodeBERT − UniXcoder (Multi)    -0.011  -0.027    0.008 tương đương (trong ±0,03)
+            Hiệu kép (Multi)     0.012  -0.021    0.040      không phân biệt được
+ CodeBERT − UniXcoder (LOLO)    -0.006  -0.022    0.011 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)    -0.000  -0.028    0.029 tương đương (trong ±0,03)
+--- Tỷ lệ hàm bị cắt ở 510 token mã (CodeBERT)
+                  n  ty_le_bi_cat  trung_vi_token
+language                                         
+C            2852.0         0.272           341.0
+C#            396.0         0.359           361.5
+C++          1509.0         0.321           344.0
+Go           2423.0         0.100           153.0
+Java         2535.0         0.268           255.0
+JavaScript   3050.0         0.241           267.0
+Python       2180.0         0.262           280.5
+Tổng        14945.0         0.243           272.0
+--- AUROC trong cụm, trung bình theo cụm, macro 6 (mô tả)
+{'cb_mono': 0.606, 'cb_multi': 0.611, 'cb_lolo': 0.627, 'ux_mono': 0.663, 'ux_multi': 0.625, 'ux_lolo': 0.611}
+--- Đường AUROC test macro 6 theo epoch, epoch được chọn, giờ GPU (mô tả)
+  CodeBERT  mono  [0.51, 0.516, 0.528, 0.539, 0.551, 0.558, 0.562, 0.568, 0.571, 0.569]  chọn: {1: 2, 2: 3, 3: 2, 4: 3, 5: 3, 6: 7, 7: 2, 8: 5, 9: 3, 10: 5}  16.39 giờ
+  CodeBERT  multi [0.51, 0.541, 0.567, 0.585, 0.589, 0.591, 0.588, 0.588, 0.584, 0.583]  chọn: {3: 2, 4: 1, 7: 1, 10: 1}  16.36 giờ
+  CodeBERT  lolo  [0.525, 0.558, 0.575, 0.581, 0.577, 0.573, 0.57, 0.572, 0.572, 0.574]  chọn: {4: 2, 5: 1, 6: 1, 7: 1, 10: 2}  23.89 giờ
+  UniXcoder mono  [0.512, 0.524, 0.537, 0.561, 0.57, 0.579, 0.586, 0.588, 0.589, 0.589]  chọn: {1: 1, 2: 1, 3: 1, 4: 5, 5: 6, 6: 3, 7: 4, 8: 6, 9: 2, 10: 6}  16.44 giờ
+  UniXcoder multi [0.523, 0.564, 0.584, 0.592, 0.596, 0.596, 0.588, 0.583, 0.584, 0.584]  chọn: {4: 1, 7: 3, 10: 1}  17.18 giờ
+  UniXcoder lolo  [0.544, 0.574, 0.586, 0.591, 0.594, 0.585, 0.587, 0.586, 0.583, 0.584]  chọn: {4: 3, 5: 1, 6: 2, 10: 1}  24.08 giờ
+
+===================== CVF (19907 hàm) =====================
+Mã băm chuẩn dự đoán UniXcoder (mode,unit_id,xác suất 8 chữ số; sắp xếp): 2c4f76aaa5f3445e487a7c75d404e8d707509980c3ce00b1ae49a4de71652b2b
+--- chính, macro 6: 19907 hàm, 3374 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.538   0.528    0.548    tương đương ngẫu nhiên
+              CodeBERT Multi     0.574   0.555    0.593           trên ngẫu nhiên
+               CodeBERT LOLO     0.574   0.552    0.596           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.036   0.014    0.059            dương (CI > 0)
+       CodeBERT Multi − Mono     0.037   0.018    0.056            dương (CI > 0)
+       CodeBERT LOLO − Multi    -0.001  -0.012    0.008 tương đương (trong ±0,03)
+              UniXcoder Mono     0.560   0.547    0.575      không phân biệt được
+             UniXcoder Multi     0.585   0.565    0.607           trên ngẫu nhiên
+              UniXcoder LOLO     0.578   0.556    0.600           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.019  -0.002    0.036      không phân biệt được
+      UniXcoder Multi − Mono     0.025   0.014    0.039            dương (CI > 0)
+      UniXcoder LOLO − Multi    -0.007  -0.022    0.006 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.022  -0.035   -0.010               âm (CI < 0)
+             Hiệu kép (Mono)     0.017  -0.005    0.038      không phân biệt được
+CodeBERT − UniXcoder (Multi)    -0.011  -0.027    0.004 tương đương (trong ±0,03)
+            Hiệu kép (Multi)     0.032  -0.005    0.065      không phân biệt được
+ CodeBERT − UniXcoder (LOLO)    -0.005  -0.014    0.004 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)     0.011  -0.006    0.029 tương đương (trong ±0,03)
+--- S3 macro 7: 19907 hàm, 3374 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.525   0.516    0.535    tương đương ngẫu nhiên
+              CodeBERT Multi     0.568   0.549    0.587      không phân biệt được
+               CodeBERT LOLO     0.568   0.547    0.590      không phân biệt được
+        CodeBERT LOLO − Mono     0.043   0.020    0.066            dương (CI > 0)
+       CodeBERT Multi − Mono     0.042   0.024    0.061            dương (CI > 0)
+       CodeBERT LOLO − Multi     0.000  -0.011    0.010 tương đương (trong ±0,03)
+              UniXcoder Mono     0.553   0.541    0.567      không phân biệt được
+             UniXcoder Multi     0.574   0.551    0.597           trên ngẫu nhiên
+              UniXcoder LOLO     0.573   0.550    0.595           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.021  -0.001    0.040      không phân biệt được
+      UniXcoder Multi − Mono     0.021   0.005    0.036            dương (CI > 0)
+      UniXcoder LOLO − Multi    -0.000  -0.014    0.012 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.027  -0.041   -0.014               âm (CI < 0)
+             Hiệu kép (Mono)     0.017  -0.005    0.038      không phân biệt được
+CodeBERT − UniXcoder (Multi)    -0.006  -0.022    0.010 tương đương (trong ±0,03)
+            Hiệu kép (Multi)     0.032  -0.005    0.065      không phân biệt được
+ CodeBERT − UniXcoder (LOLO)    -0.006  -0.021    0.007 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)     0.011  -0.006    0.029 tương đương (trong ±0,03)
+--- S1 bỏ cụm khổng lồ: 19476 hàm, 3372 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.538   0.529    0.548    tương đương ngẫu nhiên
+              CodeBERT Multi     0.566   0.554    0.582           trên ngẫu nhiên
+               CodeBERT LOLO     0.561   0.551    0.574           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.023   0.013    0.034            dương (CI > 0)
+       CodeBERT Multi − Mono     0.028   0.016    0.042            dương (CI > 0)
+       CodeBERT LOLO − Multi    -0.005  -0.013    0.003 tương đương (trong ±0,03)
+              UniXcoder Mono     0.559   0.546    0.574      không phân biệt được
+             UniXcoder Multi     0.578   0.563    0.596           trên ngẫu nhiên
+              UniXcoder LOLO     0.566   0.554    0.581           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.007  -0.006    0.020 tương đương (trong ±0,03)
+      UniXcoder Multi − Mono     0.019   0.012    0.026 tương đương (trong ±0,03)
+      UniXcoder LOLO − Multi    -0.012  -0.026    0.001 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.021  -0.034   -0.010               âm (CI < 0)
+             Hiệu kép (Mono)     0.020  -0.001    0.042      không phân biệt được
+CodeBERT − UniXcoder (Multi)    -0.012  -0.028    0.003 tương đương (trong ±0,03)
+            Hiệu kép (Multi)     0.028  -0.009    0.064      không phân biệt được
+ CodeBERT − UniXcoder (LOLO)    -0.006  -0.015    0.002 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)     0.009  -0.007    0.025 tương đương (trong ±0,03)
+--- S2 tối đa 50 hàm mỗi cụm: 17203 hàm, 3374 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.542   0.534    0.551      không phân biệt được
+              CodeBERT Multi     0.569   0.558    0.580           trên ngẫu nhiên
+               CodeBERT LOLO     0.572   0.561    0.584           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.030   0.019    0.041            dương (CI > 0)
+       CodeBERT Multi − Mono     0.027   0.017    0.037            dương (CI > 0)
+       CodeBERT LOLO − Multi     0.003  -0.007    0.013 tương đương (trong ±0,03)
+              UniXcoder Mono     0.562   0.553    0.573           trên ngẫu nhiên
+             UniXcoder Multi     0.584   0.573    0.596           trên ngẫu nhiên
+              UniXcoder LOLO     0.576   0.565    0.587           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.013   0.003    0.024 tương đương (trong ±0,03)
+      UniXcoder Multi − Mono     0.022   0.013    0.030            dương (CI > 0)
+      UniXcoder LOLO − Multi    -0.009  -0.018    0.000 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.021  -0.030   -0.012               âm (CI < 0)
+             Hiệu kép (Mono)     0.017  -0.002    0.035      không phân biệt được
+CodeBERT − UniXcoder (Multi)    -0.015  -0.025   -0.005 tương đương (trong ±0,03)
+            Hiệu kép (Multi)     0.008  -0.012    0.027 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (LOLO)    -0.004  -0.013    0.004 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)     0.008  -0.009    0.025 tương đương (trong ±0,03)
+--- S4 commit ≤ 20 hàm nhãn 1: 13591 hàm, 3257 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.549   0.540    0.559      không phân biệt được
+              CodeBERT Multi     0.578   0.566    0.589           trên ngẫu nhiên
+               CodeBERT LOLO     0.577   0.567    0.587           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.028   0.018    0.039            dương (CI > 0)
+       CodeBERT Multi − Mono     0.028   0.019    0.037            dương (CI > 0)
+       CodeBERT LOLO − Multi    -0.000  -0.010    0.010 tương đương (trong ±0,03)
+              UniXcoder Mono     0.569   0.560    0.580           trên ngẫu nhiên
+             UniXcoder Multi     0.593   0.582    0.606           trên ngẫu nhiên
+              UniXcoder LOLO     0.584   0.574    0.595           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.015   0.005    0.024 tương đương (trong ±0,03)
+      UniXcoder Multi − Mono     0.024   0.015    0.032            dương (CI > 0)
+      UniXcoder LOLO − Multi    -0.009  -0.019    0.001 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.020  -0.029   -0.012 tương đương (trong ±0,03)
+             Hiệu kép (Mono)     0.021   0.006    0.039            dương (CI > 0)
+CodeBERT − UniXcoder (Multi)    -0.016  -0.026   -0.005 tương đương (trong ±0,03)
+            Hiệu kép (Multi)     0.001  -0.017    0.020 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (LOLO)    -0.007  -0.015    0.001 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)     0.005  -0.013    0.021 tương đương (trong ±0,03)
+--- S4 commit ≤ 5 hàm nhãn 1: 7898 hàm, 2767 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.549   0.540    0.558      không phân biệt được
+              CodeBERT Multi     0.582   0.571    0.594           trên ngẫu nhiên
+               CodeBERT LOLO     0.584   0.574    0.595           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.036   0.024    0.048            dương (CI > 0)
+       CodeBERT Multi − Mono     0.034   0.022    0.045            dương (CI > 0)
+       CodeBERT LOLO − Multi     0.002  -0.008    0.013 tương đương (trong ±0,03)
+              UniXcoder Mono     0.574   0.564    0.584           trên ngẫu nhiên
+             UniXcoder Multi     0.601   0.589    0.613           trên ngẫu nhiên
+              UniXcoder LOLO     0.592   0.581    0.602           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.018   0.007    0.030 tương đương (trong ±0,03)
+      UniXcoder Multi − Mono     0.027   0.015    0.038            dương (CI > 0)
+      UniXcoder LOLO − Multi    -0.009  -0.019    0.002 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.025  -0.035   -0.015               âm (CI < 0)
+             Hiệu kép (Mono)     0.026   0.009    0.045            dương (CI > 0)
+CodeBERT − UniXcoder (Multi)    -0.019  -0.030   -0.006               âm (CI < 0)
+            Hiệu kép (Multi)    -0.002  -0.025    0.022 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (LOLO)    -0.007  -0.017    0.003 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)    -0.001  -0.023    0.019 tương đương (trong ±0,03)
+--- S5 hàm ≤ 510 token (CodeBERT thấy trọn hàm): 14058 hàm, 2522 cụm
+                        stat  estimate  ci_low  ci_high                   verdict
+               CodeBERT Mono     0.542   0.530    0.554      không phân biệt được
+              CodeBERT Multi     0.579   0.560    0.599           trên ngẫu nhiên
+               CodeBERT LOLO     0.576   0.558    0.596           trên ngẫu nhiên
+        CodeBERT LOLO − Mono     0.034   0.015    0.052            dương (CI > 0)
+       CodeBERT Multi − Mono     0.037   0.017    0.056            dương (CI > 0)
+       CodeBERT LOLO − Multi    -0.003  -0.014    0.008 tương đương (trong ±0,03)
+              UniXcoder Mono     0.563   0.547    0.582      không phân biệt được
+             UniXcoder Multi     0.588   0.568    0.612           trên ngẫu nhiên
+              UniXcoder LOLO     0.582   0.560    0.604           trên ngẫu nhiên
+       UniXcoder LOLO − Mono     0.018  -0.003    0.037      không phân biệt được
+      UniXcoder Multi − Mono     0.025   0.014    0.036            dương (CI > 0)
+      UniXcoder LOLO − Multi    -0.006  -0.025    0.009 tương đương (trong ±0,03)
+ CodeBERT − UniXcoder (Mono)    -0.022  -0.037   -0.008               âm (CI < 0)
+             Hiệu kép (Mono)     0.019  -0.005    0.046      không phân biệt được
+CodeBERT − UniXcoder (Multi)    -0.009  -0.030    0.010 tương đương (trong ±0,03)
+            Hiệu kép (Multi)     0.043  -0.002    0.081      không phân biệt được
+ CodeBERT − UniXcoder (LOLO)    -0.006  -0.018    0.005 tương đương (trong ±0,03)
+             Hiệu kép (LOLO)     0.003  -0.017    0.027 tương đương (trong ±0,03)
+--- Tỷ lệ hàm bị cắt ở 510 token mã (CodeBERT)
+                  n  ty_le_bi_cat  trung_vi_token
+language                                         
+C            6780.0         0.342           370.0
+C#            635.0         0.280           308.0
+C++          1985.0         0.340           353.0
+Go           1753.0         0.163           196.0
+Java         3456.0         0.238           219.0
+JavaScript   2768.0         0.257           278.0
+Python       2530.0         0.340           344.0
+Tổng        19907.0         0.294           308.0
+--- AUROC trong cụm, trung bình theo cụm, macro 6 (mô tả)
+{'cb_mono': 0.565, 'cb_multi': 0.603, 'cb_lolo': 0.605, 'ux_mono': 0.644, 'ux_multi': 0.62, 'ux_lolo': 0.632}
+--- Đường AUROC test macro 6 theo epoch, epoch được chọn, giờ GPU (mô tả)
+  CodeBERT  mono  [0.503, 0.514, 0.527, 0.54, 0.54, 0.545, 0.547, 0.546, 0.55, 0.549]  chọn: {1: 6, 2: 5, 3: 1, 4: 4, 5: 2, 6: 4, 7: 4, 8: 1, 9: 3, 10: 5}  22.2 giờ
+  CodeBERT  multi [0.508, 0.526, 0.558, 0.577, 0.572, 0.577, 0.573, 0.575, 0.577, 0.576]  chọn: {3: 1, 5: 1, 7: 1, 8: 2}  23.03 giờ
+  CodeBERT  lolo  [0.512, 0.553, 0.569, 0.58, 0.584, 0.58, 0.578, 0.573, 0.57, 0.569]  chọn: {2: 2, 3: 1, 5: 1, 6: 1, 7: 1, 8: 1}  32.05 giờ
+  UniXcoder mono  [0.506, 0.528, 0.542, 0.551, 0.557, 0.56, 0.559, 0.561, 0.565, 0.565]  chọn: {1: 3, 2: 3, 3: 4, 4: 4, 5: 6, 6: 3, 7: 1, 8: 7, 9: 2, 10: 2}  26.39 giờ
+  UniXcoder multi [0.515, 0.553, 0.571, 0.59, 0.59, 0.594, 0.583, 0.587, 0.578, 0.579]  chọn: {3: 1, 5: 3, 10: 1}  27.34 giờ
+  UniXcoder lolo  [0.535, 0.58, 0.583, 0.59, 0.584, 0.585, 0.574, 0.577, 0.575, 0.574]  chọn: {1: 1, 2: 1, 3: 2, 4: 1, 7: 1, 10: 1}  39.65 giờ
+
+real	4m25.906s
+user	4m16.680s
+sys	0m0.405s

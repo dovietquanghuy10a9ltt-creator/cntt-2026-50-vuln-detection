@@ -1,0 +1,115 @@
+===== main
+mono        macro6 +0.547 [+0.532,+0.564] không phân biệt được | +0.552 [+0.539,+0.567] không phân biệt được | +0.548 [+0.533,+0.564] không phân biệt được  mean 0.549 sd 0.003
+mono        macro7 +0.553 [+0.538,+0.568] không phân biệt được | +0.554 [+0.543,+0.568] không phân biệt được | +0.549 [+0.536,+0.564] không phân biệt được  mean 0.552 sd 0.003
+multi       macro6 +0.573 [+0.557,+0.592] trên ngẫu nhiên | +0.590 [+0.569,+0.610] trên ngẫu nhiên | +0.568 [+0.551,+0.589] trên ngẫu nhiên  mean 0.577 sd 0.012
+multi       macro7 +0.585 [+0.570,+0.604] trên ngẫu nhiên | +0.598 [+0.578,+0.618] trên ngẫu nhiên | +0.584 [+0.567,+0.604] trên ngẫu nhiên  mean 0.589 sd 0.008
+lolo        macro6 +0.572 [+0.561,+0.588] trên ngẫu nhiên | +0.582 [+0.563,+0.602] trên ngẫu nhiên | +0.571 [+0.559,+0.587] trên ngẫu nhiên  mean 0.575 sd 0.006
+lolo        macro7 +0.582 [+0.569,+0.597] trên ngẫu nhiên | +0.597 [+0.577,+0.615] trên ngẫu nhiên | +0.589 [+0.575,+0.604] trên ngẫu nhiên  mean 0.589 sd 0.007
+lolo-mono   macro6 +0.025 [+0.010,+0.042] dương (CI > 0) | +0.030 [+0.012,+0.047] dương (CI > 0) | +0.023 [+0.007,+0.040] dương (CI > 0)  mean 0.026 sd 0.004
+lolo-mono   macro7 +0.029 [+0.013,+0.045] dương (CI > 0) | +0.042 [+0.022,+0.058] dương (CI > 0) | +0.040 [+0.024,+0.056] dương (CI > 0)  mean 0.037 sd 0.007
+lolo-multi  macro6 -0.000 [-0.013,+0.014] tương đương (trong ±0.03) | -0.008 [-0.020,+0.004] tương đương (trong ±0.03) | +0.002 [-0.019,+0.027] tương đương (trong ±0.03)  mean -0.002 sd 0.005
+lolo-multi  macro7 -0.003 [-0.017,+0.009] tương đương (trong ±0.03) | -0.001 [-0.014,+0.010] tương đương (trong ±0.03) | +0.005 [-0.015,+0.027] tương đương (trong ±0.03)  mean -0.000 sd 0.004
+multi-mono  macro6 +0.025 [+0.015,+0.038] dương (CI > 0) | +0.038 [+0.024,+0.049] dương (CI > 0) | +0.021 [+0.004,+0.034] dương (CI > 0)  mean 0.028 sd 0.009
+multi-mono  macro7 +0.033 [+0.022,+0.044] dương (CI > 0) | +0.044 [+0.029,+0.055] dương (CI > 0) | +0.036 [+0.020,+0.049] dương (CI > 0)  mean 0.037 sd 0.006
+===== s1
+mono        macro6 +0.550 [+0.534,+0.567] không phân biệt được | +0.552 [+0.537,+0.568] không phân biệt được | +0.549 [+0.532,+0.565] không phân biệt được  mean 0.550 sd 0.002
+mono        macro7 +0.555 [+0.540,+0.571] không phân biệt được | +0.556 [+0.542,+0.571] không phân biệt được | +0.550 [+0.535,+0.565] không phân biệt được  mean 0.553 sd 0.003
+multi       macro6 +0.579 [+0.560,+0.597] trên ngẫu nhiên | +0.584 [+0.568,+0.602] trên ngẫu nhiên | +0.578 [+0.558,+0.597] trên ngẫu nhiên  mean 0.580 sd 0.004
+multi       macro7 +0.588 [+0.571,+0.606] trên ngẫu nhiên | +0.592 [+0.576,+0.610] trên ngẫu nhiên | +0.589 [+0.570,+0.608] trên ngẫu nhiên  mean 0.590 sd 0.002
+lolo        macro6 +0.579 [+0.567,+0.592] trên ngẫu nhiên | +0.576 [+0.564,+0.590] trên ngẫu nhiên | +0.570 [+0.559,+0.583] trên ngẫu nhiên  mean 0.575 sd 0.004
+lolo        macro7 +0.589 [+0.576,+0.603] trên ngẫu nhiên | +0.591 [+0.576,+0.606] trên ngẫu nhiên | +0.587 [+0.574,+0.600] trên ngẫu nhiên  mean 0.589 sd 0.002
+lolo-mono   macro6 +0.029 [+0.012,+0.046] dương (CI > 0) | +0.024 [+0.008,+0.040] dương (CI > 0) | +0.022 [+0.003,+0.041] dương (CI > 0)  mean 0.025 sd 0.004
+lolo-mono   macro7 +0.034 [+0.017,+0.050] dương (CI > 0) | +0.035 [+0.016,+0.052] dương (CI > 0) | +0.037 [+0.018,+0.055] dương (CI > 0)  mean 0.035 sd 0.001
+lolo-multi  macro6 +0.000 [-0.015,+0.016] tương đương (trong ±0.03) | -0.008 [-0.022,+0.006] tương đương (trong ±0.03) | -0.007 [-0.024,+0.011] tương đương (trong ±0.03)  mean -0.005 sd 0.005
+lolo-multi  macro7 +0.001 [-0.013,+0.015] tương đương (trong ±0.03) | -0.002 [-0.015,+0.012] tương đương (trong ±0.03) | -0.002 [-0.018,+0.014] tương đương (trong ±0.03)  mean -0.001 sd 0.002
+multi-mono  macro6 +0.029 [+0.020,+0.040] dương (CI > 0) | +0.032 [+0.024,+0.041] dương (CI > 0) | +0.029 [+0.019,+0.039] dương (CI > 0)  mean 0.030 sd 0.002
+multi-mono  macro7 +0.033 [+0.023,+0.044] dương (CI > 0) | +0.036 [+0.026,+0.048] dương (CI > 0) | +0.039 [+0.027,+0.049] dương (CI > 0)  mean 0.036 sd 0.003
+===== s2
+mono        macro6 +0.555 [+0.544,+0.566] không phân biệt được | +0.558 [+0.547,+0.568] không phân biệt được | +0.555 [+0.544,+0.566] không phân biệt được  mean 0.556 sd 0.001
+mono        macro7 +0.558 [+0.547,+0.570] không phân biệt được | +0.558 [+0.548,+0.569] không phân biệt được | +0.555 [+0.545,+0.565] không phân biệt được  mean 0.557 sd 0.002
+multi       macro6 +0.584 [+0.572,+0.596] trên ngẫu nhiên | +0.591 [+0.579,+0.604] trên ngẫu nhiên | +0.580 [+0.569,+0.593] trên ngẫu nhiên  mean 0.585 sd 0.006
+multi       macro7 +0.595 [+0.582,+0.609] trên ngẫu nhiên | +0.599 [+0.586,+0.613] trên ngẫu nhiên | +0.595 [+0.581,+0.608] trên ngẫu nhiên  mean 0.596 sd 0.002
+lolo        macro6 +0.581 [+0.570,+0.591] trên ngẫu nhiên | +0.581 [+0.570,+0.592] trên ngẫu nhiên | +0.575 [+0.565,+0.585] trên ngẫu nhiên  mean 0.579 sd 0.003
+lolo        macro7 +0.589 [+0.574,+0.602] trên ngẫu nhiên | +0.596 [+0.579,+0.609] trên ngẫu nhiên | +0.593 [+0.579,+0.604] trên ngẫu nhiên  mean 0.592 sd 0.004
+lolo-mono   macro6 +0.026 [+0.016,+0.035] dương (CI > 0) | +0.024 [+0.013,+0.034] dương (CI > 0) | +0.020 [+0.009,+0.031] dương (CI > 0)  mean 0.023 sd 0.003
+lolo-mono   macro7 +0.030 [+0.018,+0.043] dương (CI > 0) | +0.038 [+0.022,+0.050] dương (CI > 0) | +0.038 [+0.024,+0.050] dương (CI > 0)  mean 0.035 sd 0.004
+lolo-multi  macro6 -0.003 [-0.012,+0.006] tương đương (trong ±0.03) | -0.010 [-0.020,-0.002] tương đương (trong ±0.03) | -0.005 [-0.016,+0.005] tương đương (trong ±0.03)  mean -0.006 sd 0.004
+lolo-multi  macro7 -0.007 [-0.017,+0.003] tương đương (trong ±0.03) | -0.003 [-0.014,+0.006] tương đương (trong ±0.03) | -0.002 [-0.013,+0.009] tương đương (trong ±0.03)  mean -0.004 sd 0.003
+multi-mono  macro6 +0.029 [+0.022,+0.036] dương (CI > 0) | +0.034 [+0.026,+0.042] dương (CI > 0) | +0.025 [+0.017,+0.033] dương (CI > 0)  mean 0.029 sd 0.004
+multi-mono  macro7 +0.037 [+0.027,+0.046] dương (CI > 0) | +0.041 [+0.030,+0.050] dương (CI > 0) | +0.040 [+0.029,+0.050] dương (CI > 0)  mean 0.039 sd 0.002
+===== per language main s43
+C 0.524 0.558 0.541
+C++ 0.534 0.569 0.556
+Go 0.540 0.530 0.591
+Java 0.558 0.589 0.576
+JavaScript 0.574 0.574 0.575
+Python 0.556 0.589 0.583
+C# 0.554 0.680 0.700
+===== per language verdicts s43 main
+mono C +0.524 [+0.516,+0.533] tương đương ngẫu nhiên (trong [0.45,0.55])
+mono C++ +0.534 [+0.523,+0.546] tương đương ngẫu nhiên (trong [0.45,0.55])
+mono Go +0.540 [+0.524,+0.576] không phân biệt được
+mono Java +0.558 [+0.542,+0.577] không phân biệt được
+mono JavaScript +0.574 [+0.489,+0.658] không phân biệt được
+mono Python +0.556 [+0.533,+0.584] không phân biệt được
+mono C# +0.554 [+0.537,+0.578] không phân biệt được
+multi C +0.558 [+0.540,+0.583] không phân biệt được
+multi C++ +0.569 [+0.546,+0.591] không phân biệt được
+multi Go +0.530 [+0.480,+0.580] không phân biệt được
+multi Java +0.589 [+0.569,+0.613] trên ngẫu nhiên
+multi JavaScript +0.574 [+0.487,+0.671] không phân biệt được
+multi Python +0.589 [+0.558,+0.627] trên ngẫu nhiên
+multi C# +0.680 [+0.604,+0.745] trên ngẫu nhiên
+lolo C +0.541 [+0.530,+0.552] không phân biệt được
+lolo C++ +0.556 [+0.539,+0.577] không phân biệt được
+lolo Go +0.591 [+0.559,+0.669] trên ngẫu nhiên
+lolo Java +0.576 [+0.552,+0.606] trên ngẫu nhiên
+lolo JavaScript +0.575 [+0.535,+0.620] không phân biệt được
+lolo Python +0.583 [+0.553,+0.620] trên ngẫu nhiên
+lolo C# +0.700 [+0.631,+0.755] trên ngẫu nhiên
+lolo-mono C +0.017 [+0.005,+0.029] tương đương (trong ±0.03)
+lolo-mono C++ +0.023 [+0.005,+0.043] dương (CI > 0)
+lolo-mono Go +0.051 [+0.024,+0.094] dương (CI > 0)
+lolo-mono Java +0.018 [-0.005,+0.043] không phân biệt được
+lolo-mono JavaScript +0.000 [-0.085,+0.089] không phân biệt được
+lolo-mono Python +0.028 [+0.009,+0.049] dương (CI > 0)
+lolo-mono C# +0.146 [+0.071,+0.199] dương (CI > 0)
+lolo-multi C -0.017 [-0.046,+0.004] không phân biệt được
+lolo-multi C++ -0.013 [-0.031,+0.007] không phân biệt được
+lolo-multi Go +0.061 [+0.000,+0.194] dương (CI > 0)
+lolo-multi Java -0.013 [-0.032,+0.008] không phân biệt được
+lolo-multi JavaScript +0.001 [-0.081,+0.083] không phân biệt được
+lolo-multi Python -0.006 [-0.021,+0.011] tương đương (trong ±0.03)
+lolo-multi C# +0.019 [-0.023,+0.051] không phân biệt được
+multi-mono C +0.034 [+0.015,+0.060] dương (CI > 0)
+multi-mono C++ +0.035 [+0.014,+0.056] dương (CI > 0)
+multi-mono Go -0.009 [-0.095,+0.048] không phân biệt được
+multi-mono Java +0.031 [+0.015,+0.049] dương (CI > 0)
+multi-mono JavaScript -0.001 [-0.021,+0.032] không phân biệt được
+multi-mono Python +0.033 [+0.016,+0.052] dương (CI > 0)
+multi-mono C# +0.126 [+0.052,+0.190] dương (CI > 0)
+17 29 mean 0.019 max 0.084
+17 43 mean 0.017 max 0.06
+29 43 mean 0.018 max 0.087
+per-cell sd mean 0.014 range mean 0.027 range max 0.087
+mono C 0.515 0.514 0.524 mean 0.518 sd 0.005
+mono C++ 0.531 0.549 0.534 mean 0.538 sd 0.010
+mono Go 0.511 0.526 0.540 mean 0.526 sd 0.014
+mono Java 0.555 0.575 0.558 mean 0.563 sd 0.011
+mono JavaScript 0.590 0.575 0.574 mean 0.580 sd 0.009
+mono Python 0.582 0.573 0.556 mean 0.570 sd 0.013
+mono C# 0.584 0.568 0.554 mean 0.569 sd 0.015
+multi C 0.544 0.561 0.558 mean 0.554 sd 0.009
+multi C++ 0.570 0.560 0.569 mean 0.566 sd 0.006
+multi Go 0.542 0.617 0.530 mean 0.563 sd 0.047
+multi Java 0.597 0.610 0.589 mean 0.599 sd 0.011
+multi JavaScript 0.579 0.597 0.574 mean 0.583 sd 0.012
+multi Python 0.603 0.596 0.589 mean 0.596 sd 0.007
+multi C# 0.662 0.645 0.680 mean 0.662 sd 0.018
+lolo C 0.547 0.546 0.541 mean 0.545 sd 0.003
+lolo C++ 0.567 0.560 0.556 mean 0.561 sd 0.006
+lolo Go 0.545 0.630 0.591 mean 0.589 sd 0.042
+lolo Java 0.577 0.570 0.576 mean 0.574 sd 0.004
+lolo JavaScript 0.596 0.587 0.575 mean 0.586 sd 0.011
+lolo Python 0.601 0.602 0.583 mean 0.595 sd 0.010
+lolo C# 0.640 0.682 0.700 mean 0.674 sd 0.031

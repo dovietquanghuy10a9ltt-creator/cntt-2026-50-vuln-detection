@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN",
+  "decision_ids": [
+    "W3-I005",
+    "W3-I006"
+  ],
+  "protocol_version": "v1",
+  "model": {
+    "name": "microsoft/unixcoder-base-nine",
+    "revision": "5f0dc256eb0904af496d427451da5d7f90261676",
+    "mode": "<encoder-only>",
+    "tokenizer_checkpoint_policy": "same pinned model revision"
+  },
+  "input": {
+    "canonical_field": "func",
+    "max_length": 768,
+    "special_token_overhead": 4,
+    "code_token_budget": 764,
+    "reference_sequence": "<s> <encoder-only> </s> CODE </s>"
+  },
+  "truncation": {
+    "enabled": true,
+    "side": "right",
+    "policy": "keep_first_code_tokens",
+    "max_code_tokens": 764,
+    "outcome_dependent": false
+  },
+  "padding": {
+    "side": "right",
+    "strategy": "dynamic_longest_in_batch",
+    "global_pad_to_max_length": false,
+    "hard_max_length": 768,
+    "pad_token": "tokenizer_pad_token"
+  },
+  "attention_mask": {
+    "exclude_padding_positions": true
+  },
+  "decision_evidence": {
+    "population": "train+validation",
+    "rows": 18139,
+    "target_test_inspected_for_decision": false,
+    "observed_max_sequence_length": 720,
+    "pct_over_512": 7.216494845360824,
+    "pct_over_768": 0.0,
+    "token_length_evidence_commit": "d5f0737"
+  }
+}
