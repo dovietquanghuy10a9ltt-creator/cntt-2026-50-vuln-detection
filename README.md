@@ -53,6 +53,7 @@ Thiết kế, giả thuyết và tiêu chí kết luận được đăng ký tr�
 | Bổ sung lần 4 | Lặp lại trên CVEfixes | [osf.io/dkxrf](https://osf.io/dkxrf) |
 | Bổ sung lần 5 | Thêm seed 29 và 43 cho CVEfixes | [osf.io/bm36f](https://osf.io/bm36f) |
 | Bổ sung lần 6 | Lặp lại với CodeBERT | [osf.io/79cbe](https://osf.io/79cbe) |
+| Bổ sung lần 7 | Tách cơ chế trong thí nghiệm cặp sinh đôi (RS-blind) | [osf.io/q24h3](https://osf.io/q24h3) |
 
 **Sai lệch so với bản đăng ký gốc** (ghi đầy đủ ở Bảng 4-9 của báo cáo):
 
@@ -95,13 +96,14 @@ python verify_checksums.py
 
 | Thí nghiệm | Đăng ký | Notebook | Mã huấn luyện | Mã phân tích | Kết quả | Mục trong báo cáo |
 | --- | --- | --- | --- | --- | --- | --- |
-| MVD v1, 5 epoch, seed 17, 29, 43 | gốc | `notebooks/01_*` | `run_grouped_cv.py` | `grouped_cv_analysis.py` | `results/01–03_*` | 4.2–4.6 |
-| Chia ngẫu nhiên theo hàm | lần 1 | `notebooks/02_*` | `run_grouped_cv.py` | `leak_compare_analysis.py` | `results/04_*` | 4.7 |
-| MVD v2, 5 và 10 epoch | lần 2 | `notebooks/03_*` | `run_grouped_cv_v2.py` | `grouped_cv_analysis.py` | `results/05_*`, `06_*` | 4.8 |
-| Cặp sinh đôi | lần 3 | `notebooks/04_*` | `run_grouped_cv.py` | `twin_analysis.py` | `results/07_*` | 4.10 |
+| MVD v1, 5 epoch, seed 17, 29, 43 | gốc | `notebooks/01_*` | `run_grouped_cv.py` | `grouped_cv_analysis.py` | `results/01–03_*` | 4.2–4.7 |
+| Chia ngẫu nhiên theo hàm | lần 1 | `notebooks/02_*` | `run_grouped_cv.py` | `leak_compare_analysis.py` | `results/04_*` | 4.8 |
+| MVD v2, 5 và 10 epoch | lần 2 | `notebooks/03_*` | `run_grouped_cv_v2.py` | `grouped_cv_analysis.py` | `results/05_*`, `06_*` | 4.10 |
+| Cặp sinh đôi | lần 3 | `notebooks/04_*` | `run_grouped_cv.py` | `twin_analysis.py` | `results/07_*` | 4.9.1 |
 | CVEfixes, seed 17 | lần 4 | `notebooks/05_*` | `run_cvefixes.py` | `cvf_analysis.py` | `results/08_*` | 4.11 |
 | CVEfixes, seed 29 và 43 | lần 5 | `notebooks/06_*` | `run_cvefixes.py` | `cvf_seeds_analysis.py` | `results/09_*` | 4.11 |
 | CodeBERT | lần 6 | `notebooks/07_*` | `run_codebert.py` | `codebert_analysis.py` | `results/10_*` | 4.12 |
+| Tách cơ chế cặp sinh đôi (RS-blind, đang chạy) | lần 7 | `notebooks/08_*` | `run_twin_blind.py` | `twin_blind_analysis.py` | chưa có | – |
 | Phân tích thăm dò (không đăng ký) | – | – | – | `thamdo_analysis.py` | `results/11_*` | 4.13 |
 
 Mọi file mã nằm trong `src/training/`. Tổng cộng 574 lần huấn luyện, khoảng 668 giờ GPU (Kaggle, T4).
