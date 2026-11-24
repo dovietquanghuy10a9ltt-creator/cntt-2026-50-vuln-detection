@@ -54,6 +54,16 @@ Thiết kế, giả thuyết và tiêu chí kết luận được đăng ký tr�
 | Bổ sung lần 5 | Thêm seed 29 và 43 cho CVEfixes | [osf.io/bm36f](https://osf.io/bm36f) |
 | Bổ sung lần 6 | Lặp lại với CodeBERT | [osf.io/79cbe](https://osf.io/79cbe) |
 
+**Sai lệch so với bản đăng ký gốc** (ghi đầy đủ ở Bảng 4-9 của báo cáo):
+
+- Cột `verdict` trong các file CSV ở `results/` do mã gắn tự động, với nhãn "trên ngẫu nhiên" khi cận dưới khoảng tin cậy
+  lớn hơn 0,55. Bản đăng ký gốc dùng mốc 0,50, nên với các kết quả thuộc bản gốc (MVD v1) hãy đọc theo mốc 0,50.
+  Ví dụ Mono v1, seed 17: 0,547 (0,532–0,564) mang nhãn "không phân biệt được" trong CSV, nhưng theo bản đăng ký gốc
+  là trên ngẫu nhiên. Từ bản bổ sung lần 4, các bản đăng ký ghi rõ mốc 0,55.
+- Khi AUROC validation của hai epoch bằng nhau, bản đăng ký gốc chọn validation loss thấp hơn rồi mới đến epoch sớm hơn;
+  mã giữ epoch sớm hơn. 7/574 lần huấn luyện bị hòa, trong đó 3 lần sẽ chọn epoch khác (2 lần trên C#, ngoài phân tích
+  chính; 1 lần CodeBERT Mono C++ fold 0 trên CVEfixes).
+
 Các bản đăng ký ghi mã SHA-256 của mã và file chia dữ liệu. Kiểm tra repo này khớp với bản đã đăng ký:
 
 ```bash
