@@ -1,0 +1,39 @@
+ mode                                             pairs                                    stat    est     lo     hi                    verdict
+ mono                          930 cặp bị tách trong RS                      AUROC cặp RS-blind  0.515  0.484  0.546                        NaN
+ mono                          930 cặp bị tách trong RS                       AUROC cặp RS-twin  0.715  0.686  0.745                        NaN
+ mono                          930 cặp bị tách trong RS                            AUROC cặp RS  0.378  0.349  0.409                        NaN
+ mono                          930 cặp bị tách trong RS                           AUROC cặp CVE  0.728  0.699  0.756                        NaN
+ mono                          930 cặp bị tách trong RS                       H1: RS-blind − RS  0.137  0.097  0.176        khẳng định (CI > 0)
+ mono                          930 cặp bị tách trong RS                  H2: RS-twin − RS-blind  0.200  0.157  0.241   RS-twin cao hơn (CI > 0)
+ mono                          930 cặp bị tách trong RS                      H3: RS-blind − CVE -0.213 -0.252 -0.172 không kết luận tương đương
+ mono                          930 cặp bị tách trong RS Mô tả: (RS-blind − RS) / (RS-twin − RS)  0.406  0.307  0.509                        NaN
+ mono                             227 cặp vốn cùng fold                      AUROC cặp RS-blind  0.656  0.599  0.718                        NaN
+ mono                             227 cặp vốn cùng fold                       AUROC cặp RS-twin  0.714  0.652  0.771                        NaN
+ mono                             227 cặp vốn cùng fold                            AUROC cặp RS  0.678  0.617  0.740                        NaN
+ mono                             227 cặp vốn cùng fold                           AUROC cặp CVE  0.687  0.630  0.744                        NaN
+ mono                             227 cặp vốn cùng fold           C1: RS-blind − RS (đối chứng) -0.022 -0.079  0.040    CI chứa 0 (như kỳ vọng)
+ mono RS, cặp bị tách có 2 phía bị phơi nhiễm (n = 748)                     Mô tả: AUROC cặp RS  0.353  0.318  0.389                        NaN
+ mono RS, cặp bị tách có 1 phía bị phơi nhiễm (n = 170)                     Mô tả: AUROC cặp RS  0.465  0.388  0.535                        NaN
+ mono  RS, cặp bị tách có 0 phía bị phơi nhiễm (n = 12)                     Mô tả: AUROC cặp RS  0.750  0.500  1.000                        NaN
+multi                          930 cặp bị tách trong RS                      AUROC cặp RS-blind  0.581  0.551  0.613                        NaN
+multi                          930 cặp bị tách trong RS                       AUROC cặp RS-twin  0.680  0.649  0.708                        NaN
+multi                          930 cặp bị tách trong RS                            AUROC cặp RS  0.434  0.402  0.466                        NaN
+multi                          930 cặp bị tách trong RS                           AUROC cặp CVE  0.656  0.625  0.685                        NaN
+multi                          930 cặp bị tách trong RS                       H1: RS-blind − RS  0.146  0.106  0.186        khẳng định (CI > 0)
+multi                          930 cặp bị tách trong RS                  H2: RS-twin − RS-blind  0.099  0.055  0.140   RS-twin cao hơn (CI > 0)
+multi                          930 cặp bị tách trong RS                      H3: RS-blind − CVE -0.075 -0.114 -0.034 không kết luận tương đương
+multi                          930 cặp bị tách trong RS Mô tả: (RS-blind − RS) / (RS-twin − RS)  0.596  0.455  0.749                        NaN
+multi                             227 cặp vốn cùng fold                      AUROC cặp RS-blind  0.687  0.626  0.744                        NaN
+multi                             227 cặp vốn cùng fold                       AUROC cặp RS-twin  0.705  0.643  0.762                        NaN
+multi                             227 cặp vốn cùng fold                            AUROC cặp RS  0.700  0.639  0.758                        NaN
+multi                             227 cặp vốn cùng fold                           AUROC cặp CVE  0.634  0.573  0.696                        NaN
+multi                             227 cặp vốn cùng fold           C1: RS-blind − RS (đối chứng) -0.013 -0.075  0.048    CI chứa 0 (như kỳ vọng)
+multi RS, cặp bị tách có 2 phía bị phơi nhiễm (n = 748)                     Mô tả: AUROC cặp RS  0.409  0.377  0.444                        NaN
+multi RS, cặp bị tách có 1 phía bị phơi nhiễm (n = 170)                     Mô tả: AUROC cặp RS  0.529  0.459  0.600                        NaN
+multi  RS, cặp bị tách có 0 phía bị phơi nhiễm (n = 12)                     Mô tả: AUROC cặp RS  0.667  0.417  0.917                        NaN
+ mono                         toàn bộ, macro 6 ngôn ngữ             Mô tả: AUROC macro RS-blind  0.592  0.522  0.635                        NaN
+ mono                         toàn bộ, macro 6 ngôn ngữ                   Mô tả: AUROC macro RS  0.583  0.511  0.628                        NaN
+ mono                         toàn bộ, macro 6 ngôn ngữ        Mô tả: AUROC macro RS-blind − RS  0.009  0.001  0.017                        NaN
+multi                         toàn bộ, macro 6 ngôn ngữ             Mô tả: AUROC macro RS-blind  0.640  0.573  0.679                        NaN
+multi                         toàn bộ, macro 6 ngôn ngữ                   Mô tả: AUROC macro RS  0.630  0.566  0.669                        NaN
+multi                         toàn bộ, macro 6 ngôn ngữ        Mô tả: AUROC macro RS-blind − RS  0.009  0.001  0.016                        NaN

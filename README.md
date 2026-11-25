@@ -33,9 +33,10 @@ dữ liệu), khoảng tin cậy 95% bằng bootstrap theo cụm CVE.
 - Khi chia theo CVE, mọi cấu hình chỉ hơn ngẫu nhiên một chút (AUROC 0,54–0,59).
 - **LOLO tương đương Multi trong cả bốn tổ hợp** (2 bộ dữ liệu × 2 mô hình): mô hình không thấy nhãn nào của ngôn ngữ
   đích vẫn đạt mức của mô hình có nhãn đó.
-- Chia ngẫu nhiên theo hàm làm sai lệch kết quả **theo hướng không cố định**. Thí nghiệm can thiệp cho thấy cơ chế:
-  khi bản lỗi và bản sửa của cùng một hàm (cặp sinh đôi, ngược nhãn) bị tách ra hai phía, mô hình xếp hạng các cặp đó
-  dưới mức ngẫu nhiên (0,378); chỉ cần giữ hai bản cùng một phía, con số lên 0,715.
+- Chia ngẫu nhiên theo hàm làm sai lệch kết quả **theo hướng không cố định**. Hai thí nghiệm can thiệp cho thấy cơ chế
+  ở các cặp sinh đôi (bản lỗi và bản sửa gần giống nhau, ngược nhãn) bị tách ra hai fold: mô hình xếp hạng các cặp đó
+  dưới mức ngẫu nhiên (0,378). Riêng việc không cho mô hình thấy hàm đối ứng đưa con số về khoảng 0,5 (RS-blind, 0,515);
+  giữ hai bản cùng một fold, tức cùng một mô hình chấm cả hai, đưa lên 0,715.
 
 Toàn bộ bảng kết quả: chạy `python make_tables.py` (xem bên dưới) hoặc đọc báo cáo tổng kết.
 
@@ -62,7 +63,7 @@ Thiết kế, giả thuyết và tiêu chí kết luận được đăng ký tr�
   Ví dụ Mono v1, seed 17: 0,547 (0,532–0,564) mang nhãn "không phân biệt được" trong CSV, nhưng theo bản đăng ký gốc
   là trên ngẫu nhiên. Từ bản bổ sung lần 4, các bản đăng ký ghi rõ mốc 0,55.
 - Khi AUROC validation của hai epoch bằng nhau, bản đăng ký gốc chọn validation loss thấp hơn rồi mới đến epoch sớm hơn;
-  mã giữ epoch sớm hơn. 7/574 lần huấn luyện bị hòa, trong đó 3 lần sẽ chọn epoch khác (2 lần trên C#, ngoài phân tích
+  mã giữ epoch sớm hơn. 7/614 lần huấn luyện bị hòa (không lần nào trong 40 lần RS-blind), trong đó 3 lần sẽ chọn epoch khác (2 lần trên C#, ngoài phân tích
   chính; 1 lần CodeBERT Mono C++ fold 0 trên CVEfixes).
 
 Các bản đăng ký ghi mã SHA-256 của mã và file chia dữ liệu. Kiểm tra repo này khớp với bản đã đăng ký:
@@ -103,10 +104,10 @@ python verify_checksums.py
 | CVEfixes, seed 17 | lần 4 | `notebooks/05_*` | `run_cvefixes.py` | `cvf_analysis.py` | `results/08_*` | 4.11 |
 | CVEfixes, seed 29 và 43 | lần 5 | `notebooks/06_*` | `run_cvefixes.py` | `cvf_seeds_analysis.py` | `results/09_*` | 4.11 |
 | CodeBERT | lần 6 | `notebooks/07_*` | `run_codebert.py` | `codebert_analysis.py` | `results/10_*` | 4.12 |
-| Tách cơ chế cặp sinh đôi (RS-blind, đang chạy) | lần 7 | `notebooks/08_*` | `run_twin_blind.py` | `twin_blind_analysis.py` | chưa có | – |
+| Tách cơ chế cặp sinh đôi (RS-blind) | lần 7 | `notebooks/08_*` | `run_twin_blind.py` | `twin_blind_analysis.py` | `results/12_*` | 4.9.1 |
 | Phân tích thăm dò (không đăng ký) | – | – | – | `thamdo_analysis.py` | `results/11_*` | 4.13 |
 
-Mọi file mã nằm trong `src/training/`. Tổng cộng 574 lần huấn luyện, khoảng 668 giờ GPU (Kaggle, T4).
+Mọi file mã nằm trong `src/training/`. Tổng cộng 614 lần huấn luyện, khoảng 687 giờ GPU (Kaggle, T4).
 
 ## Cách dùng
 
@@ -120,7 +121,7 @@ python make_tables.py cvefixes   # chỉ các bảng về CVEfixes
 
 ### 2. Tái lập phân tích từ file dự đoán (chỉ cần CPU)
 
-File dự đoán của cả 574 lần huấn luyện nằm ở mục **Releases** của repo (8 file zip, tổng khoảng 110 MB), cùng
+File dự đoán của cả 614 lần huấn luyện nằm ở mục **Releases** của repo (9 file zip, tổng khoảng 112 MB), cùng
 file `units_v1.parquet` của CVEfixes (đặt vào `data/cvefixes/`). Tải và giải nén,
 rồi chạy mã phân tích tương ứng. Ví dụ, phân tích thăm dò:
 
@@ -138,6 +139,15 @@ Phân tích ba seed của CVEfixes:
 ```bash
 python src/training/cvf_seeds_analysis.py <giải nén predictions_07> data/cvefixes/units_v1.parquet \
   data/cvefixes/groups_and_folds_cvefixes_v2_len768_paired.csv out/cvf_3seed 17 29 43
+```
+
+Thí nghiệm RS-blind (bản bổ sung lần 7):
+
+```bash
+python src/training/twin_blind_analysis.py <giải nén predictions_09>/blind_cv_results \
+  <giải nén predictions_06>/merged <giải nén predictions_02>/random_cv_results \
+  <giải nén predictions_01>/grouped_cv_results data/mvd_v1/twin_folds_v1_pairs.csv \
+  data/mvd_v1/random_folds_v1.csv data/mvd_v1/groups_and_folds_v1.csv
 ```
 
 Cách gọi các mã phân tích khác ghi ở đầu từng file. Bootstrap dùng seed cố định 20260101, nên kết quả trùng khớp

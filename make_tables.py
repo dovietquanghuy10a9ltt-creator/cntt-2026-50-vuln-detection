@@ -64,6 +64,15 @@ def twin(f):
     show("Thí nghiệm cặp sinh đôi (bổ sung lần 3): AUROC trong cặp (bản lỗi có điểm cao hơn bản sửa)", f, lines)
 
 
+def blind(f):
+    d = pd.read_csv(f)
+    lines = []
+    for (m, p), g in d.groupby(["mode", "pairs"], sort=False):
+        lines.append(f"  [{m}, {p}]")
+        lines += [row(r.stat, r.est, r.lo, r.hi, r.verdict, "−" in r.stat and "AUROC cặp" not in r.stat) for _, r in g.iterrows()]
+    show("Thí nghiệm RS-blind (bổ sung lần 7): tách cơ chế cặp sinh đôi", f, lines)
+
+
 def cvf_seeds(f):
     d = pd.read_csv(f)
     d = d[(d.tap == "chính, macro 6") & (d.seed == "mean")].set_index("stat")
@@ -94,6 +103,7 @@ TABLES = [
     ("mvd_v2 5epoch", lambda: grouped("MVD v2 (dữ liệu sạch), 5 epoch, seed 17 (bổ sung lần 2)", R / "05_mvd_v2_5epoch/v2e5_main.csv")),
     ("mvd_v2 10epoch", lambda: grouped("MVD v2 (dữ liệu sạch), 10 epoch, seed 17 (bổ sung lần 2)", R / "06_mvd_v2_10epoch/v2e10_main.csv")),
     ("twin", lambda: twin(R / "07_cap_sinh_doi/twin_results.csv")),
+    ("twin rs_blind", lambda: blind(R / "12_rs_blind/twin_blind_results.csv")),
     ("cvefixes seed17", lambda: grouped("CVEfixes, 10 epoch, seed 17 (bổ sung lần 4)", R / "08_cvefixes_seed17/cvf_main.csv")),
     ("cvefixes 3seed", lambda: cvf_seeds(R / "09_cvefixes_ba_seed/cvf_seeds_all.csv")),
     ("codebert mvd", lambda: codebert(R / "10_codebert/cb_mvd_all.csv", "MVD v2")),
